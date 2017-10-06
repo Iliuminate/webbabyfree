@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WebMyFreeBabyShop.Models.ItemBabyEntity>
+
+@{
+    ViewBag.Title = "ListItemsBabyView";
+}
+
+<h2>ListItemsBabyView</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.itemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemSerial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateAdd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qualify)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.itemImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subcategory)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemSerial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateAdd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qualify)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.itemImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subcategory)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

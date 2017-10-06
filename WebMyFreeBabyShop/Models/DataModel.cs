@@ -8,7 +8,7 @@ namespace WebMyFreeBabyShop.Models
     public partial class DataModel : DbContext
     {
         public DataModel()
-            : base("name=DataModelBaby")
+            : base("name=DataModel")
         {
         }
 
@@ -21,6 +21,11 @@ namespace WebMyFreeBabyShop.Models
             modelBuilder.Entity<CategoryEntity>()
                 .Property(e => e.categoryName)
                 .IsFixedLength();
+
+            modelBuilder.Entity<CategoryEntity>()
+                .HasMany(e => e.ItemBabyEntity)
+                .WithOptional(e => e.CategoryEntity)
+                .HasForeignKey(e => e.category);
 
             modelBuilder.Entity<ItemBabyEntity>()
                 .Property(e => e.itemName)
@@ -37,10 +42,6 @@ namespace WebMyFreeBabyShop.Models
             modelBuilder.Entity<ItemBabyEntity>()
                 .Property(e => e.itemImage)
                 .IsFixedLength();
-
-            modelBuilder.Entity<ItemBabyEntity>()
-                .HasOptional(e => e.ItemBabyEntity1)
-                .WithRequired(e => e.ItemBabyEntity2);
 
             modelBuilder.Entity<Subcategory>()
                 .Property(e => e.subcategory1)

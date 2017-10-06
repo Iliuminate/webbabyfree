@@ -149,7 +149,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryEntitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemBabyEntitiesController.cs" />
+    <Compile Include="Controllers\SubcategoriesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,6 +185,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="sqlScripts\CREATE_CATEGORYENTITY.sql" />
+    <Content Include="sqlScripts\create_database.sql" />
+    <Content Include="sqlScripts\CREATE_ITEMSBABY.sql" />
+    <Content Include="sqlScripts\CREATE_SUBCATEGORY.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -196,6 +203,26 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Subcategory.cshtml" />
+    <Content Include="Views\Home\ListSubcategoryView.cshtml" />
+    <Content Include="Views\Home\ListCategoryView.cshtml" />
+    <Content Include="Views\ListItemsBabyView.cshtml" />
+    <Content Include="Views\Subcategories\Create.cshtml" />
+    <Content Include="Views\Subcategories\Delete.cshtml" />
+    <Content Include="Views\Subcategories\Details.cshtml" />
+    <Content Include="Views\Subcategories\Edit.cshtml" />
+    <Content Include="Views\Subcategories\Index.cshtml" />
+    <Content Include="Views\ItemBabyEntities\Create.cshtml" />
+    <Content Include="Views\ItemBabyEntities\Delete.cshtml" />
+    <Content Include="Views\ItemBabyEntities\Details.cshtml" />
+    <Content Include="Views\ItemBabyEntities\Edit.cshtml" />
+    <Content Include="Views\ItemBabyEntities\Index.cshtml" />
+    <Content Include="Views\CategoryEntities\Create.cshtml" />
+    <Content Include="Views\CategoryEntities\Delete.cshtml" />
+    <Content Include="Views\CategoryEntities\Details.cshtml" />
+    <Content Include="Views\CategoryEntities\Edit.cshtml" />
+    <Content Include="Views\CategoryEntities\Index.cshtml" />
+    <Content Include="Views\Home\_parcialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

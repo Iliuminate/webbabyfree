@@ -1,0 +1,90 @@
+﻿@model WebMyFreeBabyShop.Models.ItemBabyEntity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ItemBabyEntity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.itemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subcategory1.subcategory1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subcategory1.subcategory1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemSerial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemSerial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateAdd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateAdd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.qualify)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.qualify)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.itemImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.itemImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.category)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

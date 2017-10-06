@@ -32,5 +32,78 @@ namespace WebMyFreeBabyShop.Controllers
         {
             return View();
         }
+
+
+        //------------------------------------------------------------------------------------
+        //---------- CREAR ELEMENTOS ---------------------------------------------------------
+
+        public PartialViewResult _parcialView()
+        {
+            return PartialView();
+        }
+
+
+        //------------------------------------------------------------------------------------
+        //---------- CREAR ELEMENTOS ---------------------------------------------------------
+
+        [HttpPost]
+        public ActionResult NewSubcategory(Models.Subcategory subcategory)
+        {
+            try
+            {
+                using (var dataModel = new Models.DataModel())
+                {
+                    var result = dataModel.Subcategory.Add(subcategory);
+                    var action = dataModel.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
+
+        //------------------------------------------------------------------------------------
+        //---------- LISTAS ------------------------------------------------------------------
+
+        public ActionResult ListSubcategoryView()
+        {
+            List<Models.Subcategory> subcategory = new List<Models.Subcategory>();
+            using (var dataModel = new Models.DataModel())
+            {                
+                subcategory = dataModel.Subcategory.ToList();                
+            }
+
+            return View(subcategory);
+        }
+
+        public ActionResult ListCategoryView()
+        {
+            List<Models.CategoryEntity> category = new List<Models.CategoryEntity>();
+            using (var dataModel = new Models.DataModel())
+            {
+                category = dataModel.CategoryEntity.ToList();
+            }
+
+            return View(category);
+        }
+
+        public ActionResult ListItemsBabyView()
+        {
+            List<Models.ItemBabyEntity> itemsbaby = new List<Models.ItemBabyEntity>();
+            using (var dataModel = new Models.DataModel())
+            {
+                itemsbaby = dataModel.ItemBabyEntity.ToList();
+            }
+
+            return View(itemsbaby);
+        }
+
+        //------------------------------------------------------------------------------------
+        //---------- LISTAS ------------------------------------------------------------------
     }
 }

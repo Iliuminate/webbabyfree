@@ -32,10 +32,8 @@ namespace WebMyFreeBabyShop.Models
 
         public int? subcategory { get; set; }
 
+        public virtual CategoryEntity CategoryEntity { get; set; }
+
         public virtual Subcategory Subcategory1 { get; set; }
-
-        public virtual ItemBabyEntity ItemBabyEntity1 { get; set; }
-
-        public virtual ItemBabyEntity ItemBabyEntity2 { get; set; }
     }
 }
