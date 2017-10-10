@@ -10,7 +10,12 @@
 
 
 <div>
-    @Html.Partial("_parcialView")
+    <div class="col-md-6">
+        @Html.Partial("Subcategory")
+    </div>
+    <div class="col-md-6">
+        @*@Html.Partial("~/Views/Subcategories/Index.cshtml", (List<WebMyFreeBabyShop.Models.Subcategory>)ViewBag.lista)*@
+    </div>
 </div>
 
 <div class="row">

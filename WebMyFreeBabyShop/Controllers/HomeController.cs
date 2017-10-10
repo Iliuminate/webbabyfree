@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebMyFreeBabyShop.Models;
 
 namespace WebMyFreeBabyShop.Controllers
 {
@@ -10,6 +11,8 @@ namespace WebMyFreeBabyShop.Controllers
     {
         public ActionResult Index()
         {
+            DataModel db = new DataModel();
+            ViewBag.lista = db.Subcategory.ToList();
             return View();
         }
 
@@ -80,6 +83,7 @@ namespace WebMyFreeBabyShop.Controllers
 
             return View(subcategory);
         }
+                
 
         public ActionResult ListCategoryView()
         {
